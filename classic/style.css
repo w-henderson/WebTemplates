@@ -327,7 +327,7 @@ div.pricing div.tier h2 {
     padding-top: 10px;
     width: 100%;
     height: 62px;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 div.pricing div.tier div {
@@ -340,8 +340,8 @@ div.pricing div.tier button {
     height: 50px;
     margin: 25px 12.5px 12.5px;
     outline: none;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+    border: 1px solid var(--link-hover-color);
+    color: var(--link-hover-color);
     background-color: transparent;
     border-radius: 2px;
     font-family: Poppins;
@@ -351,7 +351,7 @@ div.pricing div.tier button {
 }
 
 div.pricing div.tier button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--link-hover-color);
     color: var(--hero-text-color);
 }
 
