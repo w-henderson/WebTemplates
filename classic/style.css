@@ -206,3 +206,7 @@ a:hover { color: var(--link-hover-color); }
         transform: none;
     }
 }
+
+/* EXTRA */
+
+.hidden { display: none !important; }
