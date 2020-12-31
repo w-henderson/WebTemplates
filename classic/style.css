@@ -10,8 +10,8 @@ body.lightTheme {
     --text-color: #00020f;
     --hero-header-color: #f2f4ff;
     --hero-text-color: #ffffff;
-    --section-color-1: #fff2f2;
-    --section-color-2: #ece3e3;
+    --section-color-1: #f2f2f2;
+    --section-color-2: #e3e3e3;
     --link-hover-color: #ef6461;
 }
 
@@ -37,6 +37,45 @@ body {
 
 .shadow.text { text-shadow: 0 0 20px rgba(0, 0, 0, 0.4); }
 .shadow.box { filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.4)); }
+
+/* NAVIGATION */
+
+div.navigation {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    color: var(--hero-text-color);
+    font-weight: 700;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 2vh;
+    font-size: 3vh;
+    white-space: nowrap;
+    overflow: auto hidden;
+    text-align: right;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+div.navigation span {
+    float: left;
+}
+
+div.navigation a:link, div.navigation a:visited, div.navigation a:active, div.navigation a {
+    color: var(--hero-text-color);
+    margin: 0 1.5vh;
+    cursor: pointer;
+}
+
+div.navigation a::after {
+    content: "\2022";
+    margin: 0 -2vh 0 2vh;
+}
+
+div.navigation a:nth-last-child(1)::after {
+    content: "";
+    margin: initial;
+}
 
 /* HERO SECTION */
 
@@ -96,15 +135,6 @@ body {
 .heroContent button:hover {
     background-color: var(--hero-text-color);
     color: var(--accent-color-darker);
-}
-
-@media (orientation: portrait) {
-    .heroContent { margin: 2.5vh 0.5vh; }
-    .hero { padding: 8vh 5vw; }
-    section div.container {
-        margin: 0 15% 0 15% !important;
-        padding: 2.5vh 0 !important;
-    }
 }
 
 .heroImage {
@@ -182,13 +212,30 @@ div.footer span {
 
 /* LINK STYLING */
 
-a:link, a:visited, a:active {
+a:link, a:visited, a:active, a {
     color: var(--text-color);
     transition: 100ms;
     font-weight: 200;
     text-decoration: none;
 }
 a:hover { color: var(--link-hover-color); }
+
+/* MOBILE OVERRIDES */
+
+@media (orientation: portrait) {
+    .heroContent { margin: 2.5vh 0.5vh; }
+    .hero { padding: 8vh 5vw; }
+    section div.container {
+        margin: 0 15% 0 15% !important;
+        padding: 2.5vh 0 !important;
+    }
+    div.navigation { display: none; }
+}
+
+/* EXTRA */
+
+.hidden { display: none !important; }
+.bold { font-weight: 500 !important; }
 
 /* ANIMATION */
 
@@ -207,6 +254,8 @@ a:hover { color: var(--link-hover-color); }
     }
 }
 
-/* EXTRA */
+@keyframes hintAtSwipe {
+    0% {
 
-.hidden { display: none !important; }
+    }
+}
