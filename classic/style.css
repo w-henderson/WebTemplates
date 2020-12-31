@@ -13,6 +13,7 @@ body.lightTheme {
     --section-color-1: #f2f2f2;
     --section-color-2: #e3e3e3;
     --link-hover-color: #ef6461;
+    --light-emphasis: #cabebe;
 }
 
 body.darkTheme {
@@ -25,6 +26,7 @@ body.darkTheme {
     --section-color-1: #313638;
     --section-color-2: #242729;
     --link-hover-color: #ef6461;
+    --light-emphasis: #cabebe;
 }
 
 body {
@@ -227,6 +229,7 @@ div.navigation i {
 }
 
 /* REGULAR SECTIONS */
+
 section {
     background-color: var(--section-color-1);
     color: var(--text-color);
@@ -265,6 +268,7 @@ ul li::before {
 }
 
 /* FOOTER */
+
 div.footer {
     background-color: var(--section-color-1);
     color: var(--text-color);
@@ -279,6 +283,76 @@ div.footer:nth-child(2n+1) {
 div.footer span {
     position: absolute;
     right: 1.5vh;
+}
+
+/* PRICING STYLING */
+
+div.pricing {
+    margin: 2vh 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3vh;
+}
+
+div.pricing div.tier {
+    flex: 1;
+    min-width: 220px;
+    text-align: center;
+    border: 1px solid var(--light-emphasis);
+    box-sizing: border-box;
+    background-color: var(--section-color-1);
+    border-radius: 5px;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+div.pricing div.tier span {
+    display: block;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+div.pricing div.tier h2 {
+    margin: 0 0 10px;
+    font-weight: 200;
+    font-size: 28px;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 10px;
+    width: 100%;
+    height: 62px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+div.pricing div.tier div {
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+div.pricing div.tier button {
+    width: calc(100% - 25px);
+    height: 50px;
+    margin: 25px 12.5px 12.5px;
+    outline: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    background-color: transparent;
+    border-radius: 2px;
+    font-family: Poppins;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 250ms, color 250ms;
+}
+
+div.pricing div.tier button:hover {
+    background-color: var(--accent-color);
+    color: var(--hero-text-color);
 }
 
 /* LINK STYLING */
